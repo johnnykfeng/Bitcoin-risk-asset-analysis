@@ -1,6 +1,6 @@
 # Introduction
 
-![Bitcoin_heading](./figures/Bitcoin%20image.jpg)
+![Bitcoin_heading](./figure_bitcoin_analysis/../figures_bitcoin_analysis/bitcoin_lowres.png)
 
 * Bitcoin https://bitcoin.org/en/bitcoin-paper
 * S&P500 https://en.wikipedia.org/wiki/S%26P_500
