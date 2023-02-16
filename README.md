@@ -1,5 +1,4 @@
-# Table of Contents
-- [Table of Contents](#table-of-contents)
+
 - [Introduction](#introduction)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [CPI and Inflation](#cpi-and-inflation)
