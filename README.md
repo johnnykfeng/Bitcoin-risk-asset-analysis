@@ -1,3 +1,19 @@
+# Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [CPI and Inflation](#cpi-and-inflation)
+- [Volatility analysis](#volatility-analysis)
+  - [Drawdown Analysis](#drawdown-analysis)
+  - [Distribution of Daily and Monthly Returns](#distribution-of-daily-and-monthly-returns)
+- [Correlation Analysis](#correlation-analysis)
+- [Porfolio Optimization](#porfolio-optimization)
+    - [Calculating Sharpe ratio](#calculating-sharpe-ratio)
+  - [Visualizing the Efficient Frontier](#visualizing-the-efficient-frontier)
+- [Conclusion and recommendation](#conclusion-and-recommendation)
+- [References](#references)
+  - [Investment references](#investment-references)
+
 # Introduction
 
 ![Bitcoin_heading](./figure_bitcoin_analysis/../figures_bitcoin_analysis/bitcoin_lowres.png)
@@ -8,7 +24,7 @@
 
 The purpose of this report is to analyze Bitcoin as an asset compared to other more traditional assets such as stocks and gold. Recently there has been large interest in Bitcoin as an investable asset due to it's high returns in the last decade. We will attempt to give a full picture of the asset using the tools and techniques from traditional finance, then draw some insights and recommendations about whether or not to include it in the portfolio of any investment fund. 
 
-# 📝 Exploratory Data Analysis
+# Exploratory Data Analysis
 We will be using historical price data spanning from year September 2014 to November 2021.
 Each of the data sets for **Bitcoin**, **SP500**, **Gold**, and **CPI** do not match perfectly in their date columns because of differences in their trading frequency. Bitcoin uniquely trades 365 days of the year, whereas SP500 trades only 252 days of the year. Gold and CPI are given in a monthly data format.
 
@@ -39,7 +55,7 @@ Monthly returns time-series plot.
 Comparison of average annual returns.
 
 
-# 📅 CPI and Inflation
+# CPI and Inflation
 <p>
 Consumer Price Index (CPI) is a measure of the general cost of living. It is calculated by the weighted average of the prices of certain consumer goods and services. Inflation rate is determined by the rate of change in CPI, which is considered to be the measure of the increase price of goods. More broadly, most investable assets appreciate in price due to inflation, therefore the inflation rate is considered a benchmark for all investment portfolios to surpass.</p>
 <p> Looking closely at the tail of the CPI and inflation data, we notice that there has been a inflection point near the start of the Covid-19 pandemic, where CPI rate change increases. </p>
@@ -47,7 +63,7 @@ Consumer Price Index (CPI) is a measure of the general cost of living. It is cal
 ![figure](./figures_bitcoin_analysis/cpi_inflation.png)
 CPI and Inflation.
 
-# 📊 Volatility analysis 
+# Volatility analysis 
 
 ## Drawdown Analysis
 
@@ -72,7 +88,7 @@ Bitcoin drawdowns.
 ![figure](./figures_bitcoin_analysis/distribution_monthly.png)
 
 
-# 💹 Correlation Analysis
+# Correlation Analysis
 
 ![figure](./figures_bitcoin_analysis/heatmap_monthly_returns.png)
 
@@ -82,7 +98,7 @@ From this analysis, we can conclude that the 3 assets have very little correlati
 
 I added the inflation rate for the monthly and annual correlation analysis to see which can be a potential hedge against inflation. Ideally we want an asset that is more correlated with the inflation rate to protect against the loss of purchasing power of the US dollar. On an annual basis, it seems the SP500 is the best asset for tracking inflation. We found that SP500 and Bitcoin returns show 26% correlation with each other on a monthly basis and 50% correlation on an annual basis. This positive low correlation can be just a result of both assets performing well in a long term basis and is indicative of a general bull market trend in the past few years.
 
-# 💻 Porfolio Optimization 
+# Porfolio Optimization 
 In this section, we create a portfolio consisting of the 3 assets BTC, SPX, GOLD. We use traditional investing metrics to maximize the sharpe ratio and find the efficient frontier. 
 Much of this work is adapted from this helpful blog link:
 https://towardsdatascience.com/efficient-frontier-in-python-detailed-tutorial-84a304f03e79
@@ -107,13 +123,13 @@ R_f = risk free return
 
 ![figure](./figures_bitcoin_analysis/sharpe_ratio.png)
 
-# ✔️ Conclusion and recommendation
+# Conclusion and recommendation
 
 The results of section 6.3, not surprisingly, show that the portfolio with the **highest returns consists of 100% Bitcoin** (most top right point), yet also the most volatiliy. The point with the **maximum Sharpe ratio** is weighted **3.7% Bitcoin**, **4.9% SP500**, and **91.3% Gold**. In traditional finance, the recommended Sharpe Ratio is 1 or above. Bitcoin's high historical returns skews it's Sharpe ratio favorably despite it's high volatility.
 
 This work suggest that Bitcoin is worth having in a portfolio for an optimized risk-adjusted return. It's extreme volatility and potential downsides make it difficult for investment funds to allocate a large position on Bitcoin, so I recomment a small position just to capture it's potential returns while mitigating it volatility. There are other reasons to put Bitcoin in a portfolio, such as it's potential hedge against inflation and it's decoupling from other traditional assets. One important caveat is that Bitcoin is a relatively new asset in the investing landscape, and it's price history thus far may not be a good forecast of it's future price movement. 
 
-# 📔 References
+# References
 
 ## Investment references
 
@@ -128,3 +144,5 @@ https://www.investopedia.com/terms/i/inflation.asp <br>
 https://www.investopedia.com/terms/e/efficientfrontier.asp <br>
 https://www.investopedia.com/terms/s/sharperatio.asp <br>
 https://towardsdatascience.com/efficient-frontier-in-python-detailed-tutorial-84a304f03e79 <br>
+
+[def]: #investment-references
