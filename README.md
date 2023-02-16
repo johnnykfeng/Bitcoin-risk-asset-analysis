@@ -71,3 +71,60 @@ Bitcoin drawdowns.
 
 ![figure](./figures_bitcoin_analysis/distribution_monthly.png)
 
+
+# 💹 Correlation Analysis
+
+![figure](./figures_bitcoin_analysis/heatmap_monthly_returns.png)
+
+![figure](./figures_bitcoin_analysis/heatmap_annual_returns.png)
+
+From this analysis, we can conclude that the 3 assets have very little correlation on a daily basis, however on a monthly and annual basis they show some correlation. Gold shows the least correlation with the other assets regardless of the sampling frequency. 
+
+I added the inflation rate for the monthly and annual correlation analysis to see which can be a potential hedge against inflation. Ideally we want an asset that is more correlated with the inflation rate to protect against the loss of purchasing power of the US dollar. On an annual basis, it seems the SP500 is the best asset for tracking inflation. We found that SP500 and Bitcoin returns show 26% correlation with each other on a monthly basis and 50% correlation on an annual basis. This positive low correlation can be just a result of both assets performing well in a long term basis and is indicative of a general bull market trend in the past few years.
+
+# 💻 Porfolio Optimization 
+In this section, we create a portfolio consisting of the 3 assets BTC, SPX, GOLD. We use traditional investing metrics to maximize the sharpe ratio and find the efficient frontier. 
+Much of this work is adapted from this helpful blog link:
+https://towardsdatascience.com/efficient-frontier-in-python-detailed-tutorial-84a304f03e79
+
+### Calculating Sharpe ratio
+The Sharpe ratio is a metric that represents the risk adjusted returns of a portfolio. Investment funds typically look for portfolios with reasonably high Sharpe ratios to mitigate it's risk while trying to maximize returns.
+<p>
+
+Sharpe Ratio = (R_p - R_f)/{\sigma_p}  
+
+R_p = return of portfolio 
+
+R_f = risk free return 
+
+\sigma_p = volatility i.e. standard deviation of the portfolio's return 
+
+*\*sorry, latex doesn't work in md file*
+</p>
+
+## Visualizing the Efficient Frontier
+<p>Here we plot each simulated portfolio with returns on the y-axis and volatility on the x-axis. The Efficient Frontier is a set of optimal portfolios that yield the best risk-adjusted returns. In the plot below, the efficient frontier can be seen as a line of points on the top left edge of the cluster, drawing a line from the point of maximum return to the point of maximum Sharpe ratio.</p>
+
+![figure](./figures_bitcoin_analysis/sharpe_ratio.png)
+
+# ✔️ Conclusion and recommendation
+
+The results of section 6.3, not surprisingly, show that the portfolio with the **highest returns consists of 100% Bitcoin** (most top right point), yet also the most volatiliy. The point with the **maximum Sharpe ratio** is weighted **3.7% Bitcoin**, **4.9% SP500**, and **91.3% Gold**. In traditional finance, the recommended Sharpe Ratio is 1 or above. Bitcoin's high historical returns skews it's Sharpe ratio favorably despite it's high volatility.
+
+This work suggest that Bitcoin is worth having in a portfolio for an optimized risk-adjusted return. It's extreme volatility and potential downsides make it difficult for investment funds to allocate a large position on Bitcoin, so I recomment a small position just to capture it's potential returns while mitigating it volatility. There are other reasons to put Bitcoin in a portfolio, such as it's potential hedge against inflation and it's decoupling from other traditional assets. One important caveat is that Bitcoin is a relatively new asset in the investing landscape, and it's price history thus far may not be a good forecast of it's future price movement. 
+
+# 📔 References
+
+## Investment references
+
+https://bitcoin.org/en/bitcoin-paper <br>
+https://www.investopedia.com/terms/b/bitcoin.asp <br>
+https://en.wikipedia.org/wiki/S%26P_500 <br>
+https://www.investopedia.com/terms/s/sp500.asp <br>
+https://www.investopedia.com/articles/economics/09/why-gold-matters.asp <br>
+https://www.investopedia.com/terms/d/drawdown.asp <br>
+https://www.investopedia.com/terms/c/consumerpriceindex.asp <br>
+https://www.investopedia.com/terms/i/inflation.asp <br>
+https://www.investopedia.com/terms/e/efficientfrontier.asp <br>
+https://www.investopedia.com/terms/s/sharperatio.asp <br>
+https://towardsdatascience.com/efficient-frontier-in-python-detailed-tutorial-84a304f03e79 <br>
