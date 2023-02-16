@@ -1,4 +1,4 @@
-
+## Table of Contents
 - [Introduction](#introduction)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [CPI and Inflation](#cpi-and-inflation)
